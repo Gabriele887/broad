@@ -1,0 +1,47 @@
+<!-- index.html (GitHub Pages) -->
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reindirizzamento WhatsApp…</title>
+
+    <!-- Redirect fallback (alcuni browser lo rispettano, altri no) -->
+    <meta
+      http-equiv="refresh"
+      content="0; url=https://wa.me/393514244519?text=Ciao%2C%20aggiungimi%20alla%20lista%20WhatsApp%20VIP%20per%20offerte%20e%20eventi.%20(So%20che%20devo%20salvare%20il%20numero%20per%20riceverli%20e%20accetto%20le%20comunicazioni%20marketing.)"
+    />
+
+    <script>
+      // Redirect "quasi immediato" (100ms)
+      const waUrl =
+        "https://wa.me/393514244519?text=" +
+        encodeURIComponent(
+          "Ciao, aggiungimi alla lista WhatsApp VIP per offerte e eventi. (So che devo salvare il numero per riceverli e accetto le comunicazioni marketing.)"
+        );
+
+      // Prova subito e poi riprova dopo 100ms (alcuni browser sono più “lenti” ad aprire app)
+      window.location.replace(waUrl);
+      setTimeout(() => window.location.replace(waUrl), 100);
+    </script>
+
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 24px; }
+      .box { max-width: 640px; margin: 0 auto; }
+      a { word-break: break-all; }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <h1>Ti sto aprendo WhatsApp…</h1>
+      <p>Se non si apre automaticamente, clicca qui:</p>
+      <p>
+        <a
+          href="https://wa.me/393514244519?text=Ciao%2C%20aggiungimi%20alla%20lista%20WhatsApp%20VIP%20per%20offerte%20e%20eventi.%20(So%20che%20devo%20salvare%20il%20numero%20per%20riceverli%20e%20accetto%20le%20comunicazioni%20marketing.)"
+          >Apri WhatsApp</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
